@@ -18,4 +18,4 @@ class Config(object):
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
     ADMINS = [os.getenv('ADMIN')]
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 20
