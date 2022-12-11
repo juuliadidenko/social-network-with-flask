@@ -7,20 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-11 22:34+0300\n"
+"POT-Creation-Date: 2022-12-12 00:33+0300\n"
 "PO-Revision-Date: 2022-12-11 22:51+0300\n"
 "Last-Translator: \n"
-"Language-Team: ru <LL@li.org>\n"
 "Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Generated-By: Babel 2.11.0\n"
-"X-Generator: Poedit 3.2.2\n"
 
-#: app/__init__.py:21
+#: app/__init__.py:23
 msgid "Please log in to access this page"
 msgstr "Авторизуйтесь,  чтобы увидеть эту страницу"
 
@@ -52,7 +51,7 @@ msgstr "Email"
 msgid "Repeat password"
 msgstr "Повторите пароль"
 
-#: app/forms.py:26
+#: app/forms.py:26 app/templates/register.html:5
 msgid "Register"
 msgstr "Зарегистрироваться"
 
@@ -137,7 +136,8 @@ msgid "Explore"
 msgstr "Поиск"
 
 #: app/routes.py:205
-msgid "Check your email for the instructions"
+#, fuzzy
+msgid "Check your email for the instructions to reset your password"
 msgstr "Письмо с инструкциями отправлено на ваш email"
 
 #: app/routes.py:209
@@ -243,3 +243,4 @@ msgstr "Подписаться"
 #: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "Отписаться"
+
