@@ -19,3 +19,4 @@ class Config(object):
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
     ADMINS = [os.getenv('ADMIN')]
     POSTS_PER_PAGE = 15
+    LANGUAGES = ['en', 'ru']

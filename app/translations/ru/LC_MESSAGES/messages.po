@@ -1,0 +1,245 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-12-11 22:34+0300\n"
+"PO-Revision-Date: 2022-12-11 22:51+0300\n"
+"Last-Translator: \n"
+"Language-Team: ru <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.11.0\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page"
+msgstr "Авторизуйтесь,  чтобы увидеть эту страницу"
+
+#: app/email.py:22
+msgid "[InTouch] Reset Your Password"
+msgstr "[InTouch] Сброс пароля"
+
+#: app/forms.py:11 app/forms.py:18 app/forms.py:42
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: app/forms.py:12 app/forms.py:21 app/forms.py:76
+msgid "Password"
+msgstr "Пароль"
+
+#: app/forms.py:13
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: app/forms.py:14 app/routes.py:66
+msgid "Sign In"
+msgstr "Войти"
+
+#: app/forms.py:19 app/forms.py:70
+msgid "Email"
+msgstr "Email"
+
+#: app/forms.py:23 app/forms.py:78
+msgid "Repeat password"
+msgstr "Повторите пароль"
+
+#: app/forms.py:26
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: app/forms.py:32 app/forms.py:56
+msgid "Please use a different username"
+msgstr "Укажите другое имя пользователя"
+
+#: app/forms.py:38
+msgid "Please use a different email address"
+msgstr "Укажите другой email"
+
+#: app/forms.py:43
+msgid "About me"
+msgstr "Обо мне"
+
+#: app/forms.py:44 app/forms.py:60 app/forms.py:66
+msgid "Submit"
+msgstr "Отправить"
+
+#: app/forms.py:64
+msgid "Say something"
+msgstr "Напишите что-нибудь"
+
+#: app/forms.py:72
+msgid "Request password reset"
+msgstr "Запросить сброс пароля"
+
+#: app/forms.py:80 app/templates/reset_password.html:5
+#: app/templates/reset_password_request.html:5
+msgid "Reset password"
+msgstr "Сброс пароля"
+
+#: app/routes.py:32
+msgid "Your post is now live!"
+msgstr "Ваш пост опубликован!"
+
+#: app/routes.py:43 app/templates/base.html:25
+msgid "Home"
+msgstr "Домашняя страница"
+
+#: app/routes.py:58
+msgid "Invalid username of password"
+msgstr "Неверное имя пользователя или пароль"
+
+#: app/routes.py:88
+msgid "Congratulations, you are now a registered user!"
+msgstr "Поздравляем, вы зарегистрированы!"
+
+#: app/routes.py:125
+msgid "Changes have been saved"
+msgstr "Изменения сохранены"
+
+#: app/routes.py:131
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: app/routes.py:141 app/routes.py:162
+#, python-format
+msgid "User %(username)s not found"
+msgstr "Пользователь %(username)s не найден"
+
+#: app/routes.py:145
+msgid "You cannot follow yourself"
+msgstr "Вы не можете подписаться на свой профиль"
+
+#: app/routes.py:149
+#, python-format
+msgid "You are following %(username)s"
+msgstr "Вы подписаны на %(username)s"
+
+#: app/routes.py:166
+msgid "You cannot unfollow yourself"
+msgstr "Вы не можете отписаться от своего профиля"
+
+#: app/routes.py:170
+#, python-format
+msgid "You are not following %(username)s"
+msgstr "Вы не подписаны на %(username)s"
+
+#: app/routes.py:190 app/templates/base.html:26
+msgid "Explore"
+msgstr "Поиск"
+
+#: app/routes.py:205
+msgid "Check your email for the instructions"
+msgstr "Письмо с инструкциями отправлено на ваш email"
+
+#: app/routes.py:209
+msgid "Reset Password"
+msgstr "Сброс пароля"
+
+#: app/routes.py:224
+msgid "Your password has been reset"
+msgstr "Пароль сброшен"
+
+#: app/templates/404.html:4
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: app/templates/404.html:5 app/templates/500.html:5
+msgid "Back"
+msgstr "Назад"
+
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "Произошла ошибка"
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "Пользователь %(username)s %(when)s"
+
+#: app/templates/base.html:7
+msgid "Welcome to InTouch"
+msgstr "Добро пожаловать на InTouch"
+
+#: app/templates/base.html:30
+msgid "Login"
+msgstr "Логин"
+
+#: app/templates/base.html:32
+msgid "Profile"
+msgstr "Профиль"
+
+#: app/templates/base.html:33
+msgid "Logout"
+msgstr "Выйти"
+
+#: app/templates/edit_profile.html:5 app/templates/user.html:15
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: app/templates/index.html:5
+#, python-format
+msgid "Hi, %(username)s!"
+msgstr "Привет, %(username)s!"
+
+#: app/templates/index.html:17 app/templates/user.html:41
+msgid "Newer posts"
+msgstr "Новые посты"
+
+#: app/templates/index.html:22 app/templates/user.html:46
+msgid "Older posts"
+msgstr "Старые посты"
+
+#: app/templates/login.html:5
+msgid "Sign in"
+msgstr "Войти"
+
+#: app/templates/login.html:13
+msgid "New user?"
+msgstr "Не зарегистрированы?"
+
+#: app/templates/login.html:13
+msgid "Click to register"
+msgstr "Зарегистрироваться"
+
+#: app/templates/login.html:16
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: app/templates/login.html:18
+msgid "Click here to reset"
+msgstr "Запросить сброс пароля"
+
+#: app/templates/user.html:8
+msgid "User"
+msgstr "Пользователь"
+
+#: app/templates/user.html:11
+msgid "Last seen on"
+msgstr "Заходил"
+
+#: app/templates/user.html:13
+#, python-format
+msgid "%(count)d followers"
+msgstr "Подписчики: %(count)d"
+
+#: app/templates/user.html:13
+#, python-format
+msgid "%(count)d following"
+msgstr "читает: %(count)d"
+
+#: app/templates/user.html:20
+msgid "Follow"
+msgstr "Подписаться"
+
+#: app/templates/user.html:27
+msgid "Unfollow"
+msgstr "Отписаться"
