@@ -1,18 +1,18 @@
 import json
 import requests
+from flask import current_app
 from flask_babel import _
-from app import app
 
 
 URL = "https://translate.api.cloud.yandex.net/translate/v2/translate"
 
 
 def translate(text, source_lang, dest_lang):
-    if 'TRANSLATOR_KEY' not in app.config or \
-        not app.config['TRANSLATOR_KEY']:
+    if 'TRANSLATOR_KEY' not in current_app.config or \
+        not current_app.config['TRANSLATOR_KEY']:
         return _('Error: the translation service is not configured')
     headers = {
-        "Authorization": f"Api-Key {app.config['TRANSLATOR_KEY']}",
+        "Authorization": f"Api-Key {current_app.config['TRANSLATOR_KEY']}",
     }
 
     r = requests.post(
