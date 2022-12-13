@@ -7,17 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-12 00:33+0300\n"
-"PO-Revision-Date: 2022-12-11 22:51+0300\n"
+"POT-Creation-Date: 2022-12-13 23:28+0300\n"
+"PO-Revision-Date: 2022-12-13 23:31+0300\n"
 "Last-Translator: \n"
-"Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Generated-By: Babel 2.11.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: app/__init__.py:23
 msgid "Please log in to access this page"
@@ -39,7 +40,7 @@ msgstr "Пароль"
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: app/forms.py:14 app/routes.py:66
+#: app/forms.py:14 app/routes.py:72
 msgid "Sign In"
 msgstr "Войти"
 
@@ -84,69 +85,77 @@ msgstr "Запросить сброс пароля"
 msgid "Reset password"
 msgstr "Сброс пароля"
 
-#: app/routes.py:32
+#: app/routes.py:38
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликован!"
 
-#: app/routes.py:43 app/templates/base.html:25
+#: app/routes.py:49 app/templates/base.html:25
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: app/routes.py:58
+#: app/routes.py:64
 msgid "Invalid username of password"
 msgstr "Неверное имя пользователя или пароль"
 
-#: app/routes.py:88
+#: app/routes.py:94
 msgid "Congratulations, you are now a registered user!"
 msgstr "Поздравляем, вы зарегистрированы!"
 
-#: app/routes.py:125
+#: app/routes.py:131
 msgid "Changes have been saved"
 msgstr "Изменения сохранены"
 
-#: app/routes.py:131
+#: app/routes.py:137
 msgid "Edit Profile"
 msgstr "Редактировать профиль"
 
-#: app/routes.py:141 app/routes.py:162
+#: app/routes.py:147 app/routes.py:168
 #, python-format
 msgid "User %(username)s not found"
 msgstr "Пользователь %(username)s не найден"
 
-#: app/routes.py:145
+#: app/routes.py:151
 msgid "You cannot follow yourself"
 msgstr "Вы не можете подписаться на свой профиль"
 
-#: app/routes.py:149
+#: app/routes.py:155
 #, python-format
 msgid "You are following %(username)s"
 msgstr "Вы подписаны на %(username)s"
 
-#: app/routes.py:166
+#: app/routes.py:172
 msgid "You cannot unfollow yourself"
 msgstr "Вы не можете отписаться от своего профиля"
 
-#: app/routes.py:170
+#: app/routes.py:176
 #, python-format
 msgid "You are not following %(username)s"
 msgstr "Вы не подписаны на %(username)s"
 
-#: app/routes.py:190 app/templates/base.html:26
+#: app/routes.py:196 app/templates/base.html:26
 msgid "Explore"
 msgstr "Поиск"
 
-#: app/routes.py:205
+#: app/routes.py:211
 #, fuzzy
 msgid "Check your email for the instructions to reset your password"
 msgstr "Письмо с инструкциями отправлено на ваш email"
 
-#: app/routes.py:209
+#: app/routes.py:215
 msgid "Reset Password"
 msgstr "Сброс пароля"
 
-#: app/routes.py:224
+#: app/routes.py:230
 msgid "Your password has been reset"
 msgstr "Пароль сброшен"
+
+#: app/translate.py:13
+msgid "Error: the translation service is not configured"
+msgstr "Ошибка: настройки сервиса перевода отсутствуют"
+
+#: app/translate.py:29
+msgid "Error: the translation service failed."
+msgstr "Ошибка сервиса перевода."
 
 #: app/templates/404.html:4
 msgid "Not Found"
@@ -165,6 +174,10 @@ msgstr "Произошла ошибка"
 msgid "%(username)s said %(when)s"
 msgstr "Пользователь %(username)s %(when)s"
 
+#: app/templates/_post.html:24
+msgid "Translate"
+msgstr "Перевести"
+
 #: app/templates/base.html:7
 msgid "Welcome to InTouch"
 msgstr "Добро пожаловать на InTouch"
@@ -180,6 +193,10 @@ msgstr "Профиль"
 #: app/templates/base.html:33
 msgid "Logout"
 msgstr "Выйти"
+
+#: app/templates/base.html:69
+msgid "Error: Could not contact server."
+msgstr "Ошибка: отсутствие связи с сервером."
 
 #: app/templates/edit_profile.html:5 app/templates/user.html:15
 msgid "Edit profile"
@@ -243,4 +260,3 @@ msgstr "Подписаться"
 #: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "Отписаться"
-

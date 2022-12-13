@@ -20,3 +20,4 @@ class Config(object):
     ADMINS = [os.getenv('ADMIN')]
     POSTS_PER_PAGE = 15
     LANGUAGES = ['en', 'ru']
+    TRANSLATOR_KEY = os.getenv('TRANSLATOR_KEY')
