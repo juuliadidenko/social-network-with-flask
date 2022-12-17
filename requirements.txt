@@ -166,7 +166,9 @@ werkzeug==2.2.2
     #   flask
     #   flask-login
 wheel==0.38.4
-    # via pip-tools
+    # via
+    #   -r requirements.txt
+    #   pip-tools
 wtforms==3.0.1
     # via
     #   -r requirements.txt
