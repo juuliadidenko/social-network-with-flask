@@ -38,7 +38,13 @@
                     {% else %}
                     <li>
                         <a href="{{ url_for('main.messages') }}">
-                            {{ _('Messages')}}
+                            {{ _('Messages') }}
+                            {% set new_messages = current_user.new_messages() %}
+                            <span id="message_count" class="badge"
+                                  style="visibility: {% if new_messages %}visible
+                                                     {% else %}hidden{% endif %};">
+                                {{ new_messages }}
+                            </span>
                         </a>
                     </li>
                     <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
@@ -80,6 +86,10 @@
             }).fail(function() {
                 $(destElem).text("{{ _('Error: Could not contact server.') }}");
             });
+        }
+        function set_message_count(n) {
+            $('#message_count').text(n);
+            $('#message_count').css('visibility', n ? 'visible' : 'hidden');
         }
     </script>
 {% endblock %}
