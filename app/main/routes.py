@@ -110,7 +110,7 @@ def edit_profile():
         title=_('Edit Profile'), form=form)
 
 
-@bp.route('/follow/<username>')
+@bp.route('/follow/<username>', methods=['POST'])
 @login_required
 def follow(username):
     form = EmptyForm()
@@ -126,12 +126,12 @@ def follow(username):
         current_user.follow(user)
         db.session.commit()
         flash(_('You are following %(username)s', username=username))
-        return redirect(url_for('user', username=username))
+        return redirect(url_for('main.user', username=username))
     else:
-        return redirect(url_for('index'))
+        return redirect(url_for('main.index'))
 
 
-@bp.route('/unfollow/<username>')
+@bp.route('/unfollow/<username>', methods=['POST'])
 @login_required
 def unfollow(username):
     form = EmptyForm()
