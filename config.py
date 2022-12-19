@@ -9,10 +9,11 @@ load_dotenv(os.path.join(basedir, '.env'))
 class Config(object):
     SECRET_KEY = os.getenv('SECRET_KEY')
     CSRF_ENABLED = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL') or \
+        'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = os.getenv('MAIL_SERVER')
-    MAIL_PORT = int(os.getenv('MAIL_PORT'))
+    MAIL_PORT = 587
     MAIL_USE_TLS = os.getenv('MAIL_USE_TLS', 'true').lower() in \
         ['true', 'on', '1']
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
