@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-19 20:46+0300\n"
-"PO-Revision-Date: 2022-12-19 20:50+0300\n"
+"POT-Creation-Date: 2022-12-21 01:37+0300\n"
+"PO-Revision-Date: 2022-12-21 01:40+0300\n"
 "Last-Translator: \n"
 "Language-Team: ru <LL@li.org>\n"
 "Language: ru\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Generated-By: Babel 2.11.0\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: app/__init__.py:22
+#: app/__init__.py:24
 msgid "Please log in to access this page"
 msgstr "Авторизуйтесь,  чтобы увидеть эту страницу"
 
@@ -126,11 +126,11 @@ msgstr "Сообщение"
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликован!"
 
-#: app/main/routes.py:49 app/templates/base.html:25
+#: app/main/routes.py:49
 msgid "Home"
 msgstr "Домашняя страница"
 
-#: app/main/routes.py:68 app/templates/base.html:26
+#: app/main/routes.py:68
 msgid "Explore"
 msgstr "Поиск"
 
@@ -165,13 +165,21 @@ msgstr "Вы не можете отписаться от своего профи
 msgid "You are not following %(username)s"
 msgstr "Вы не подписаны на %(username)s"
 
-#: app/main/routes.py:196
+#: app/main/routes.py:198
 msgid "Your message has been sent"
 msgstr "Сообщение отправлено"
 
-#: app/main/routes.py:199
+#: app/main/routes.py:201
 msgid "Send message"
 msgstr "Отправить сообщение"
+
+#: app/main/routes.py:243
+msgid "An export task is currently in progress"
+msgstr "Происходит выгрузка постов"
+
+#: app/main/routes.py:246
+msgid "Exporting posts..."
+msgstr "Отправка постов..."
 
 #: app/templates/_post.html:14
 #, python-format
@@ -182,30 +190,6 @@ msgstr "Пользователь %(username)s %(when)s"
 msgid "Translate"
 msgstr "Перевести"
 
-#: app/templates/base.html:7
-msgid "Welcome to InTouch"
-msgstr "Добро пожаловать на InTouch"
-
-#: app/templates/base.html:37
-msgid "Login"
-msgstr "Логин"
-
-#: app/templates/base.html:41 app/templates/messages.html:4
-msgid "Messages"
-msgstr "Сообщения"
-
-#: app/templates/base.html:44
-msgid "Profile"
-msgstr "Профиль"
-
-#: app/templates/base.html:45
-msgid "Logout"
-msgstr "Выйти"
-
-#: app/templates/base.html:81
-msgid "Error: Could not contact server."
-msgstr "Ошибка: отсутствие связи с сервером."
-
 #: app/templates/edit_profile.html:5 app/templates/user.html:15
 msgid "Edit profile"
 msgstr "Редактировать профиль"
@@ -215,21 +199,25 @@ msgstr "Редактировать профиль"
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:48
+#: app/templates/index.html:17 app/templates/user.html:51
 msgid "Newer posts"
 msgstr "Новые посты"
 
-#: app/templates/index.html:22 app/templates/user.html:53
+#: app/templates/index.html:22 app/templates/user.html:56
 msgid "Older posts"
 msgstr "Старые посты"
+
+#: app/templates/messages.html:4
+msgid "Messages"
+msgstr "Сообщения"
 
 #: app/templates/messages.html:13
 msgid "Newer messages"
 msgstr "Новые сообщения"
 
 #: app/templates/messages.html:18
-msgid "Older_messages"
-msgstr "Старые_сообщения"
+msgid "Older messages"
+msgstr "Старые сообщения"
 
 #: app/templates/search.html:4
 msgid "Search results"
@@ -266,15 +254,19 @@ msgstr "Подписчики: %(count)d"
 msgid "%(count)d following"
 msgstr "читает: %(count)d"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:17
+msgid "Export your posts"
+msgstr "Выгрузить посты"
+
+#: app/templates/user.html:23
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:30
 msgid "Unfollow"
 msgstr "Отписаться"
 
-#: app/templates/user.html:34
+#: app/templates/user.html:37
 msgid "Send private message"
 msgstr "Отправить сообщение"
 
@@ -309,3 +301,18 @@ msgstr "Назад"
 #: app/templates/errors/500.html:4
 msgid "An unexpected error has occurred"
 msgstr "Произошла ошибка"
+
+#~ msgid "Welcome to InTouch"
+#~ msgstr "Добро пожаловать на InTouch"
+
+#~ msgid "Login"
+#~ msgstr "Логин"
+
+#~ msgid "Profile"
+#~ msgstr "Профиль"
+
+#~ msgid "Logout"
+#~ msgstr "Выйти"
+
+#~ msgid "Error: Could not contact server."
+#~ msgstr "Ошибка: отсутствие связи с сервером."
