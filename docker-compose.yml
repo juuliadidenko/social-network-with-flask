@@ -1,5 +1,17 @@
 version: "3.0"
 services:
+  redis:
+    container_name: redis-rq
+    image: redis:alpine
+    command: redis-server
+    restart: always
+    ports:
+    - "6379:6379"
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+    - redis-data:/data
+    - redis-conf:/usr/local/etc/redis/redis.conf
   elasticsearch:
     container_name: es
     image: docker.elastic.co/elasticsearch/elasticsearch:8.2.3
@@ -21,6 +33,9 @@ services:
       - elasticsearch
     ports:
       - "5601:5601"
+volumes:
+  redis-data:
+  redis-conf:
 networks:
   es-net:
     driver: bridge

@@ -1,0 +1,7 @@
+Hi {{ user.username }},
+
+Please find attached the archive of your posts that you requested.
+
+Regards,
+
+The InTouch team
