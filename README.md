@@ -3,9 +3,9 @@
 **Stack:**  
 - Flask, Flask-SQLAlchemy, Flask-Bootstrap
 - PostgreSQL
-- Elasticsearch
+- Elasticsearch (post search)
 - PyJWT
-- PyBabel
+- PyBabel (en -> ru li8n) 
 
 #### Create a profile  
 Register, login, update your profile, create posts  
@@ -28,7 +28,8 @@ Send all of your posts in JSON format to your email
 (*currently for development purposes all mail goes to mailtrap.io test inbox)  
 
 ![export-posts-1](https://user-images.githubusercontent.com/104693196/211167729-f561fbc1-868a-42cc-be46-3e0d782a4d85.jpg)  
-![export-posts-2](https://user-images.githubusercontent.com/104693196/211168011-87bc3c47-a143-411b-a651-bf83f76cc340.png)
+![export-posts-2 (1)](https://user-images.githubusercontent.com/104693196/211168207-a04a2d39-8bf1-433b-bf92-1f84bcffb1ae.png)
+
 
 
 ## Quick Start  
