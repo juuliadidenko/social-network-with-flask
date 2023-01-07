@@ -13,7 +13,7 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = os.getenv('MAIL_SERVER')
-    MAIL_PORT = 587
+    MAIL_PORT = 2525
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
