@@ -27,7 +27,7 @@ Send all of your posts in JSON format to your email
 `cd microblog-with-flask`  
 2. Run `docker compose up --build -d`
 3. Create database: run
-   `docker compose exec microblog flask db init`
-   `docker compose exec microblog flask db migrate`
-   `docker compose exec microblog flask db upgrade`
+   ```docker compose exec microblog flask db init  
+   docker compose exec microblog flask db migrate  
+   docker compose exec microblog flask db upgrade```
 4. Go to `localhost:8000`
