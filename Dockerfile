@@ -1,23 +1,9 @@
-FROM python:slim
+FROM python:3.10.7-slim-buster
 
-RUN useradd microblog
+COPY requirements.txt .
 
-WORKDIR /home/microblog
+RUN pip install -r requirements.txt
 
-COPY requirements.txt requirements.txt
-RUN python -m venv venv
-RUN venv/bin/pip install -r requirements.txt
-RUN venv/bin/pip install gunicorn pymysql cryptography
+COPY . .
 
-COPY app app
-COPY migrations migrations
-COPY microblog.py config.py boot.sh ./
-RUN chmod a+x boot.sh
-
-ENV FLASK_APP microblog.py
-
-RUN chown -R microblog:microblog ./
-USER microblog
-
-EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8000"]

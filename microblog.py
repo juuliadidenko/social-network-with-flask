@@ -15,3 +15,6 @@ def make_shell_context():
         'Message': Message,
         'Task': Task
     }
+
+if __name__ == "__main__":
+    app.run()

@@ -88,6 +88,8 @@ greenlet==2.0.1
     # via
     #   -r requirements.txt
     #   sqlalchemy
+gunicorn==20.1.0
+    # via -r requirements.txt
 idna==3.4
     # via
     #   -r requirements.txt
@@ -126,6 +128,8 @@ pep517==0.13.0
     #   -r requirements.txt
     #   build
 pip-tools==6.12.1
+    # via -r requirements.txt
+psycopg2-binary==2.9.5
     # via -r requirements.txt
 pyjwt==2.6.0
     # via -r requirements.txt

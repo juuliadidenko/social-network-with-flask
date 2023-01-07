@@ -1,10 +1,50 @@
 version: "3.0"
 services:
+  microblog:
+    container_name: microblog
+    image: microblog
+    restart: always
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@microblog-db:5432/postgres
+    depends_on:
+      - microblog-db
+      - redis
+    links:
+      - microblog-db:microblog-db
+    networks:
+      - appnetwork  
+  microblog-db:
+    container_name: microblog-db 
+    image: postgres:14
+    networks:
+      - appnetwork
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=microblog-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  worker:
+    image: microblog:latest
+    command: rq worker microblog-tasks --url redis://redis:6379/0
+    networks:
+      - appnetwork
+    depends_on:
+    - redis
+    links:
+    - redis
   redis:
-    container_name: redis-rq
+    container_name: redis
     image: redis:alpine
     command: redis-server
     restart: always
+    networks:
+    - appnetwork
     ports:
     - "6379:6379"
     environment:
@@ -12,7 +52,6 @@ services:
     volumes:
     - redis-data:/data
     - redis-conf:/usr/local/etc/redis/redis.conf
-
   elasticsearch:
     container_name: es
     image: docker.elastic.co/elasticsearch/elasticsearch:8.2.3
@@ -20,7 +59,7 @@ services:
       - xpack.security.enabled=false
       - "discovery.type=single-node"
     networks:
-      - es-net
+      - appnetwork
     ports:
       - "9200:9200"
   
@@ -30,16 +69,17 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=http://es:9200
     networks:
-      - es-net
+      - appnetwork
     depends_on:
       - elasticsearch
     ports:
       - "5601:5601"
 
 volumes:
+  pgdata: {}
   redis-data:
   redis-conf:
 
 networks:
-  es-net:
+  appnetwork:
     driver: bridge
