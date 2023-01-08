@@ -5,7 +5,8 @@
 - PostgreSQL
 - Elasticsearch (post search)
 - PyJWT
-- PyBabel (en -> ru li8n) 
+- Python RQ
+- PyBabel (en -> ru i18n) 
 
 #### Create a profile  
 Register, login, update your profile, create posts  
@@ -25,7 +26,7 @@ Find new posts with **Explore** tab. Use **Search** bar to lookup posts
 
 #### Export data
 Send all of your posts in JSON format to your email  
-(*currently for development purposes all mail goes to mailtrap.io test inbox*)  
+(*currently for development purposes all mail goes to mailtrap.io test inbox instead of user email*)  
 
 ![export-posts-1](https://user-images.githubusercontent.com/104693196/211167729-f561fbc1-868a-42cc-be46-3e0d782a4d85.jpg)  
 ![export-posts-2 (1)](https://user-images.githubusercontent.com/104693196/211168207-a04a2d39-8bf1-433b-bf92-1f84bcffb1ae.png)
