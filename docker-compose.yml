@@ -30,7 +30,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
   worker:
-    image: microblog:latest
+    image: microblog
     command: rq worker microblog-tasks --url redis://redis:6379/0
     networks:
       - appnetwork
